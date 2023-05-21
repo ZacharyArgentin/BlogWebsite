@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div style="background-color: slategray; border: solid blue 2px">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, a.</p>
+    <p>Click the button below to change the background colour to red!</p>
+    <button onclick="changeBackgroundToRed()">Click Me!</button>
+
+    <script>
+        function changeBackgroundToRed() {
+            var x = document.getElementsByTagName("p");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.backgroundColor = "red";
+            }
+        }
+    </script>
+
+    <h2>JavaScript Objects</h2>
+
+    <p>An object method is a function definition, stored as a property value.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Create an object:
+        var person = {
+            firstName: "John",
+            lastName : "Doe",
+            id     : 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        // Display data from the object:
+        document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+
+    <h2>Manipulating the DOM</h2>
+
+    <p class="pClassName"> 1st p tag </p>
+
+	<p class="pClassName"> 2nd p tag</p>
+
+	<p class="pClassName"> 3rd p tag</p>
+
+	<p class="pClassName"> 4th p tag</p>
+
+    <script>
+        var a = document.getElementsByClassName("pClassName");
+        a[0].innerHTML = "Hello World!";
+        for (i = 1; i < a.length; i++) {
+            a[i].innerHTML = "Hello Computer!"
+        }
+
+        var header2s = document.getElementsByTagName("h2");
+        for (i = 0; i < header2s.length; i++) {
+            header2s[i].style.color = "gold";
+        }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>
