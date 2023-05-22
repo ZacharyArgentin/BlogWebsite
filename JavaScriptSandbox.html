@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>JavaScript Sandbox</title>
+    <style>
+        button {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
 <body>
     <div style="background-color: slategray; border: solid blue 2px">
         <h3>Navigation</h3>
@@ -7,15 +16,21 @@
             <li><a href="index.html">Home Page</a></li>
         </ul>
     </div>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, a.</p>
-    <p>Click the button below to change the background colour to red!</p>
-    <button onclick="changeBackgroundToRed()">Click Me!</button>
+    <h2>Change CSS using JavaScript</h2>
+    <button onclick="changeBackgroundToRed()">Click me to change the background colour of all p tags to red!</button>
+    <button onclick="turnToGold()">Click me to change all h2's to gold</button>
 
     <script>
         function changeBackgroundToRed() {
             var x = document.getElementsByTagName("p");
             for (var i = 0; i < x.length; i++) {
                 x[i].style.backgroundColor = "red";
+            }
+        }
+        function turnToGold() {
+            var header2s = document.getElementsByTagName("h2");
+            for (i = 0; i < header2s.length; i++) {
+                header2s[i].style.color = "gold";
             }
         }
     </script>
@@ -50,16 +65,57 @@
 
 	<p class="pClassName"> 4th p tag</p>
 
-    <script>
-        var a = document.getElementsByClassName("pClassName");
-        a[0].innerHTML = "Hello World!";
-        for (i = 1; i < a.length; i++) {
-            a[i].innerHTML = "Hello Computer!"
-        }
+    <button onclick="changeParagraphText()">Click me to change the text of the 4 paragraphs above</button>
 
-        var header2s = document.getElementsByTagName("h2");
-        for (i = 0; i < header2s.length; i++) {
-            header2s[i].style.color = "gold";
+    <script>
+        function changeParagraphText() {
+            var a = document.getElementsByClassName("pClassName");
+            a[0].innerHTML = "Hello World!";
+            for (i = 1; i < a.length; i++) {
+                a[i].innerHTML = "Hello Computer!";
+            }
+        }
+    </script>
+
+    <h2>JavaScript can change HTML!</h2>
+
+    <p id="p1">Hello World!</p>
+    <p id="p2">Changing this p tag to an h6 tag using JavaScript</p>
+    <button onclick="changeParagraphText2()">Click me to change the above 2 paragraphs!</button>
+    <script>
+        function changeParagraphText2() {
+            document.getElementById("p1").innerHTML = "This text was changed using JavaScript!";
+            document.getElementById("p2").innerHTML = "<h6>This element was changed from a p tag to an h6 tag using Javascript</h6>";
+        }
+    </script>
+
+    <img id="image1" src="img/google.png" alt="">
+    <button onclick="changeImage()">Click me to change the above image!</button>
+    <script>
+        function changeImage() {
+            document.getElementById("image1").src = "img/amazon.png";
+        }
+    </script>
+
+    <h2>Creating New HTML Elements with JavaScript</h2>
+    <div id="div1">
+        <p id="p3">Paragraph 3</p>
+    </div>
+    <script>
+        var newParagraph = document.createElement("p");
+        var textNode = document.createTextNode("This text node is added to the p tag that we created");
+        newParagraph.appendChild(textNode);
+        var element = document.getElementById("div1");
+        element.appendChild(newParagraph);
+    </script>
+
+    <h2 id="insertHTML">Inserting HTML Elements</h2>
+    <p>Click the button below to insert a new paragraph</p>
+    <button onclick="createParagraph()">Insert a new paragraph!</button>
+    <script>
+        function createParagraph() {
+            var h = document.getElementById("insertHTML");
+            h.insertAdjacentHTML("afterend", "<p>This is a new paragraph!</p>");
         }
     </script>
 </body>
