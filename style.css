@@ -9,6 +9,8 @@ body {
     margin: 0;
 }
 
+/* Header & Navbar */
+
 .header {
     padding: 80px;
     text-align: center;
@@ -43,6 +45,9 @@ body {
     color: black;
 }
 
+
+/* Main Content */
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +71,78 @@ body {
     padding: 20px;
 }
 
+/* Slideshow feature */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+.mySlides {
+    display: none;
+} 
+
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.number-text {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Footer */
 .footer {
     background-color: #333;
     color: white;
