@@ -120,6 +120,44 @@
             h.insertAdjacentHTML("afterend", "<p>This is a new paragraph!</p>");
         }
     </script>
+
+    <h2>Removing Elements using JavaScript</h2>
+
+    <div id="div-01">This is div-01</div>
+    <div id="div-02">This is div-02</div>
+    <div id="div-03">This is div-03</div>
+
+    <button onclick="deleteElement()">Click here to delete element 2</button>
+    <script>
+        function deleteElement() {
+            element = document.getElementById("div-02");
+            element.remove()
+        }
+    </script>
+
+    <p class="para">paragraph 0</p>
+    <p class="para">paragraph 1</p>
+    <p class="para">paragraph 2</p>
+    <p class="para">paragraph 3</p>
+    <p class="para">paragraph 4</p>
+    <p class="para">paragraph 5</p>
+    <p class="para">paragraph 6</p>
+    <p class="para">paragraph 7</p>
+    <p class="para">paragraph 8</p>
+    <p class="para">paragraph 9</p>
+
+    <button onclick="deleteOdds()">Click to delete the odd paragraphs</button>
+    <script>
+        function deleteOdds() {
+            var i;
+            paragraphs = document.getElementsByClassName("para");
+            for (i = paragraphs.length - 1; i > 0; i--) {
+                if (i % 2 == 1) {
+                    paragraphs[i].remove()
+                }
+            }
+        }
+    </script>
 </body>
 </html>
 
