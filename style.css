@@ -59,6 +59,11 @@ body {
     padding: 20px;
 }
 
+.side #profile-picture {
+    height: auto;
+    max-width: 100%;
+}
+
 .main {
     flex: 70%;
     background-color: white;
@@ -85,7 +90,7 @@ body {
 } 
 
 .mySlides img {
-    height: 500px;
+    height: auto;
 }
 
 .fade {
