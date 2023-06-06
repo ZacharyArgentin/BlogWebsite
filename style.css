@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+blockquote {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 /* Header & Navbar */
 
 .header {
@@ -75,6 +79,16 @@ body {
     width: 100%;
     padding: 20px;
 }
+
+.article-cover-photo {
+    width: 100%;
+}
+
+.feature-text {
+    font-size: 25px;
+}
+
+
 
 /* Slideshow feature */
 

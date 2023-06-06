@@ -5,7 +5,7 @@ html {
 
 
 h1 { 
-    color: blue;
+    color: hsl(240, 100, 50);
     font-size: 50px;
 }
 
@@ -14,12 +14,12 @@ h1 {
 }
 
 .outside {
-    color: red;
+    color: #ff0000;
     font-size: 24px;
 }
 
 #inside {
-    color: green;
+    color: rgb(0, 255, 0);
     font-size: 60px;
 }
 
