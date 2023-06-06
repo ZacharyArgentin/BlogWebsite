@@ -15,6 +15,11 @@ blockquote {
 
 small {
     display: block;
+    margin-top: 10px;
+}
+
+ul {
+    font-size: 15px;
 }
 
 /* Header & Navbar */
