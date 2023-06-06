@@ -13,6 +13,10 @@ blockquote {
     font-family: 'Times New Roman', Times, serif;
 }
 
+small {
+    display: block;
+}
+
 /* Header & Navbar */
 
 .header {
