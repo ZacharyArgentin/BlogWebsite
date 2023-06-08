@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+hr {
+    margin: 50px 8px;
+}
+
 blockquote {
     font-family: 'Times New Roman', Times, serif;
 }
@@ -20,6 +24,42 @@ small {
 
 ul {
     font-size: 15px;
+}
+
+/* Utility Classes */
+a.button {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+a.article-link {
+    background-color: #1a6a5d;
+    color: #ffffff;
+    height: 20px;
+    width: 100%;
+    border: 1px black solid;
+    border-bottom: 0px;
+    padding: 20px;
+    display: block;
+}
+
+a.article-link:hover {
+    background-color: #2a7a6d;
+    color: #ffffff;
+    height: 20px;
+    width: 100%;
+    border: 1px black solid;
+    border-bottom: 0px;
+    padding: 20px;
+    display: block;
+}
+
+a.button:hover {
+    background-color: #555;
 }
 
 /* Header & Navbar */
@@ -81,12 +121,6 @@ ul {
     flex: 70%;
     background-color: white;
     padding: 20px
-}
-
-.fakeimg {
-    background-color: aqua;
-    width: 100%;
-    padding: 20px;
 }
 
 .article-cover-photo {
