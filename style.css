@@ -26,6 +26,25 @@ ul {
     font-size: 15px;
 }
 
+/* Tables */
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: #acd0cb;
+}
+
+tr:nth-child(even):hover{
+    background-color: #9cc0bb;
+}
+
+tr:nth-child(odd):hover {
+    background-color: #eee;
+}
+
 /* Utility Classes */
 a.button {
     background-color: #333;
@@ -45,6 +64,7 @@ a.article-link {
     border-bottom: 0px;
     padding: 20px;
     display: block;
+    text-decoration: none;
 }
 
 a.article-link:hover {
