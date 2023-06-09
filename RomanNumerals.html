@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numerals</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #button-menu {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 10%;
+            position: sticky;
+            top: 50%;
+        }
+
+        button {
+            margin: 5px auto;
+            padding: 5px 20px;
+            background-color: #74148a7a;
+            border-radius: 20px;
+            display: block;
+        }
+        button:hover {
+            background-color: gold;
+        }
+        button:active {
+            background-color: red;
+        }
+
+        li {
+            margin-left: 50%;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Roman Numerals</h1>
+        <p>Count using roman numerals!</p>
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home Page</a>
+        <a href="HtmlSandbox.html">Html Sandbox Page</a>
+    </div>
+    <div id="button-menu">
+        <button onclick="addNumeral()">Add 1</button>
+        <button onclick="add5Numerals()">Add 5</button>
+        <button onclick="add10Numerals()">Add 10</button>
+        <button onclick="add50Numerals()">Add 50</button>
+        <button onclick="add100Numerals()">Add 100</button>
+    </div>
+    <div>
+        <ol id="ol" type="I">
+            
+        </ol>
+    </div>
+    <script>
+        const ol = document.getElementById("ol");
+        let curr = 1;
+        
+        function addNumeral() {
+            ol.insertAdjacentHTML("beforeend", `<li>${curr}</li>`)
+            curr++
+        }
+        
+        function add5Numerals() {
+            for (i = 1; i <= 5; i++) {
+                ol.insertAdjacentHTML("beforeend", `<li>${curr}</li>`)
+                curr++
+            }
+        }
+        function add10Numerals() {
+            for (i = 1; i <= 10; i++) {
+                ol.insertAdjacentHTML("beforeend", `<li>${curr}</li>`)
+                curr++
+            }
+        }
+        function add50Numerals() {
+            for (i = 1; i <= 50; i++) {
+                ol.insertAdjacentHTML("beforeend", `<li>${curr}</li>`)
+                curr++
+            }
+        }
+        function add100Numerals() {
+            for (i = 1; i <= 100; i++) {
+                ol.insertAdjacentHTML("beforeend", `<li>${curr}</li>`)
+                curr++
+            }
+        }
+    </script>
+</body>
+</html>
