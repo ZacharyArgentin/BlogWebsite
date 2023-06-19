@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;  /* Best compatibility practice is to set font-size to 100% in body and use em units to adjust font-size elsewhere */
     margin: 0;
 }
 
@@ -23,7 +24,7 @@ small {
 }
 
 ul {
-    font-size: 15px;
+    font-size: .9375 em; /* 15px */
 }
 
 /* Tables */
@@ -93,7 +94,7 @@ a.button:hover {
 }
 
 .header h1 {
-    font-size: 40px;
+    font-size: 3.5vw;
 }
 
 .navbar {
